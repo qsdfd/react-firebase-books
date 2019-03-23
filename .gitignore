@@ -25,3 +25,4 @@ yarn-error.log*
 # IDEs and editors
 /.idea
 *.iml
+/.vscode
