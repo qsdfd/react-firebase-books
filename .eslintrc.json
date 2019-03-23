@@ -8,6 +8,7 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -49,8 +50,9 @@
         "no-unreachable":     1,
         "no-unused-expressions": 1,
         "no-magic-numbers":   1,
-        "max-len":            [1, 80, 4],
+        "max-len":            [1, 160, 4],
         "jsx-quotes"       : 1,
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
         "react/display-name": 0,
         "react/forbid-prop-types": 0,
         "react/jsx-boolean-value": 1,
@@ -83,9 +85,9 @@
         "react/prefer-es6-class": 1,
         "react/prop-types": 1,
         "react/react-in-jsx-scope": 1,
-        "react/require-extension": 1,
+        "react/require-extension": 0,
         "react/self-closing-comp": 1,
         "react/sort-comp": 1,
-        "react/wrap-multilines": 1
+        "react/wrap-multilines": 0
     }
 }
