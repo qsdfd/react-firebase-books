@@ -1,18 +1,19 @@
-import React from 'react';
-import {Row, Input} from 'react-materialize';
+import React from "react";
+import { Translate } from "react-localize-redux";
+import extractPlaceholder from "../localize/PlaceholderExtractor";
 
-
-const TextInput = ({handler, touched, hasError, errors, meta: {label}}) => {
-    console.log(errors)
+const TextInput = ({ handler, touched, errors, meta: { name } }) => {
     return (
         <div className="row">
             <div className="input-field col s12">
-                <label>{label}</label>
-                <input type="text" className="validate" {...handler()}/>
-                {touched && hasError('required') && (
-                    <span className="helper-text" data-error="" data-success="">
-                        * {label} is required
-                    </span>
+                <input id={name} type="text" {...handler()} />
+                <label htmlFor={name}>
+                    <Translate id={`labels.${name}`} />
+                </label>
+                {touched && errors && (
+                    <div className="helper-text val-err">
+                        <Translate id={`validation.${Object.keys(errors)[0]}`} data={extractPlaceholder(errors)} />
+                    </div>
                 )}
             </div>
         </div>

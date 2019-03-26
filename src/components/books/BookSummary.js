@@ -1,10 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const MyComponent = () => {
-    return (
-        <div>
-        </div>
-    );
+  return <div>OK</div>;
 };
 
 export default MyComponent;

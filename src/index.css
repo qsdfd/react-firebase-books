@@ -31,3 +31,7 @@ code {
 div > .brand-logo {
     margin-left: 5%;
 }
+
+.val-err {
+  color: #F44336 !important;
+}

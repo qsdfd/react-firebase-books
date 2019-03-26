@@ -1,0 +1,15 @@
+{
+  "title": "Boeken",
+  "labels": {
+    "title": "Titel",
+    "author": "Auteur",
+    "description": "Beschrijving",
+    "genre": "Genre",
+    "image": "Link naar afbeelding"
+  },
+  "validation": {
+    "required": "Dit veld is vereist",
+    "minLength": "Input moet minstens ${minLength} karakters lang zijn"
+  },
+  "createNewBook": "Creëer boek"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Books",
+  "labels": {
+    "title": "Title",
+    "author": "Author",
+    "description": "Description",
+    "genre": "Genre",
+    "image": "Image link"
+  },
+  "validation": {
+    "required": "This field is required",
+    "minLength": "Input must be at least ${minLength} characters long"
+  },
+  "createNewBook": "Create New Book"
+}
