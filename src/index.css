@@ -35,3 +35,7 @@ div > .brand-logo {
 .val-err {
   color: #F44336 !important;
 }
+
+.form-button-text {
+  margin-left: 10px;
+}

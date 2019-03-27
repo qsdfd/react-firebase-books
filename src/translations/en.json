@@ -7,9 +7,18 @@
     "genre": "Genre",
     "image": "Image link"
   },
+  "formLabels" : {
+    "title": "Title *",
+    "author": "Author *",
+    "description": "Description *",
+    "genre": "Genre *",
+    "image": "Image link *"
+  },
   "validation": {
     "required": "This field is required",
     "minLength": "Input must be at least ${minLength} characters long"
   },
-  "createNewBook": "Create New Book"
+  "createNewBook": "Create New Book",
+  "submit": "Submit",
+  "create": "Create"
 }
