@@ -1,19 +1,43 @@
-import { FormBuilder } from "react-reactive-form";
+import React from "react";
+import { FormGenerator } from "react-reactive-form";
+import { Translate } from "react-localize-redux";
+import SubmitButton from "./SubmitButton";
 
-/**
- * closurized for customization purposes...
- * 
- * @param {*} formData to initialize the reactive form group
- */
-// eslint-disable-next-line import/prefer-default-export
-export const createFormGroup = (formData) => {
-    const formGroup = FormBuilder.group(formData);
-    return () => {
-        formGroup.handleDefaultFormSubmit = (e) => {
-            if(e) e.preventDefault();
-            formGroup.submitted = true;
-        };
+export const generateForm = ({
+    fieldConfig,
+    valueHandler,
+    redirectAfterSubmit,
+    translation: { formTitleId, submitButtonTextId }
+}) => {
+    let form = {};
 
-        return formGroup;
+    const setForm = formGroup => {
+        form = formGroup;
     };
-}
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        if (form.valid) {
+            valueHandler(form.value);
+            redirectAfterSubmit();
+        }
+    };
+
+    fieldConfig.controls.$field_0 = {
+        isStatic: false,
+        render: ({ invalid }) => (
+            <SubmitButton disabled={invalid} translationId={submitButtonTextId} />
+        )
+    };
+
+    return (
+        <div className="container">
+            <form onSubmit={e => handleSubmit(e)} className="white col s12">
+                <h5 className="grey-text text-dark-3">
+                    <Translate id={formTitleId} />
+                </h5>
+                <FormGenerator onMount={setForm} fieldConfig={fieldConfig} />
+            </form>
+        </div>
+    );
+};
