@@ -20,5 +20,7 @@
   },
   "createNewBook": "Creëer boek",
   "submit": "Submit",
-  "create": "Creëer"
+  "create": "Creëer",
+  "loading": "${item} is aan het laden...",
+  "book": "Boek"
 }

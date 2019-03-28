@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { withLocalize } from "react-localize-redux";
+import BookDetails from "./components/books/BookDetails";
 
 import CreateBook from "./components/books/CreateBook";
 import Dashboard from "./components/dashboard/Dashboard";
@@ -30,6 +31,7 @@ class App extends Component {
                     <Navbar />
                     <Switch>
                         <Route exact path="/" component={Dashboard} />
+                        <Route path="/book/:id" component={BookDetails} />
                         <Route path="/create" component={CreateBook} />
                     </Switch>
                 </div>

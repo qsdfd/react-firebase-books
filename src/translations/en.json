@@ -20,5 +20,7 @@
   },
   "createNewBook": "Create New Book",
   "submit": "Submit",
-  "create": "Create"
+  "create": "Create",
+  "loading": "Loading ${item}...",
+  "book": "Book"
 }
