@@ -1,16 +1,16 @@
-import { connect } from "react-redux";
-import { Validators } from "react-reactive-form";
-import TextInput from "../form/TextInput";
-import TextareaInput from "../form/TextareaInput";
-import { createBook } from "../../store/actions/bookActions";
-import { generateForm } from "../form/FormUtils";
+import { connect } from 'react-redux';
+import { Validators } from 'react-reactive-form';
+import TextInput from '../form/TextInput';
+import TextareaInput from '../form/TextareaInput';
+import { createBook } from '../../store/actions/bookActions';
+import { generateForm } from '../form/FormUtils';
 
 const CreateBook = props => {
   return generateForm({
     fieldConfig: {
       controls: {
         title: {
-            options: {
+          options: {
             validators: [
               Validators.required,
               Validators.minLength(2),
@@ -18,7 +18,7 @@ const CreateBook = props => {
             ]
           },
           render: TextInput,
-          meta: { name: "title" }
+          meta: { name: 'title' }
         },
         author: {
           options: {
@@ -29,7 +29,7 @@ const CreateBook = props => {
             ]
           },
           render: TextInput,
-          meta: { name: "author" }
+          meta: { name: 'author' }
         },
         description: {
           options: {
@@ -40,7 +40,7 @@ const CreateBook = props => {
             ]
           },
           render: TextareaInput,
-          meta: { name: "description" }
+          meta: { name: 'description' }
         },
         genre: {
           options: {
@@ -51,7 +51,7 @@ const CreateBook = props => {
             ]
           },
           render: TextInput,
-          meta: { name: "genre" }
+          meta: { name: 'genre' }
         },
         image: {
           options: {
@@ -62,17 +62,17 @@ const CreateBook = props => {
             ]
           },
           render: TextInput,
-          meta: { name: "image" }
+          meta: { name: 'image' }
         }
       }
     },
     valueHandler: props.createBook,
     redirectAfterSubmit: () => {
-      props.history.push("/");
+      props.history.push('/');
     },
     translation: {
-      formTitleId: "createNewBook",
-      submitButtonTextId: "create"
+      formTitleId: 'createNewBook',
+      submitButtonTextId: 'create'
     }
   });
 };

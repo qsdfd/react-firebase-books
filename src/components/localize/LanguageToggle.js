@@ -1,6 +1,5 @@
-import React from "react";
-import { SSL_OP_CISCO_ANYCONNECT } from "constants";
-import { withLocalize } from "react-localize-redux";
+import React from 'react';
+import { withLocalize } from 'react-localize-redux';
 
 const LanguageToggle = ({ languages, setActiveLanguage }) => {
   return (

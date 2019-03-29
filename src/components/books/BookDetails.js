@@ -6,7 +6,6 @@ import { Translate } from 'react-localize-redux';
 
 const BookDetails = props => {
   const { book } = props;
-  console.log(book);
   if (book) {
     return (
       <div className="container section">
@@ -39,7 +38,11 @@ const BookDetails = props => {
                 </table>
               </div>
               <div className="col s12 m5">
-                <img src={book.image} alt="/img/Mage's_book_detail.png" className="responsive-img"/>
+                <img
+                  src={book.image}
+                  alt="/img/Mage's_book_detail.png"
+                  className="responsive-img"
+                />
               </div>
             </div>
           </div>

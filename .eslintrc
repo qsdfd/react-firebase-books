@@ -1,55 +1,67 @@
 {
-    "extends": ["airbnb", "prettier", "prettier/react"],
-    "plugins": ["prettier"],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 2016,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "env": {
-      "es6": true,
-      "browser": true,
-      "node": true
-    },
-    "rules": {
-      "strict":             [ 2, "safe" ],
-        "no-debugger":        2,
-        "brace-style": [
-            2,
-            "1tbs",
-            { "allowSingleLine": true }
-        ],
-        "keyword-spacing":    2,
-        "space-before-function-paren": [
-            2,
-            "never"
-        ],
-        "spaced-comment":     [2, "always" ],
-        "vars-on-top":        2,
-        "no-undef":           2,
-        "no-undefined":       2,
-        "comma-dangle":       [ 2, "never" ],
-        "quotes":             [ 2, "single" ],
-        "semi":               [ 2, "always" ],
-        "guard-for-in":       2,
-        "no-eval":            2,
-        "no-with":            2,
-        "valid-typeof":       2,
-        "no-unused-vars":     2,
-        "no-continue":        1,
-        "no-extra-semi":      1,
-        "no-unreachable":     1,
-        "no-unused-expressions": 1,
-        "no-magic-numbers":   1,
-        "max-len":            [1, 160, 4],
-        "jsx-quotes"       : 1,
-        "import/prefer-default-export": 0,
-        "no-param-reassign": 0,
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "react/prop-types": 0,
-      "react/prefer-stateless-function": 0
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "strict": [2, "safe"],
+    "no-debugger": 2,
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "keyword-spacing": 2,
+    "space-before-function-paren": [2, "never"],
+    "spaced-comment": [2, "always"],
+    "vars-on-top": 2,
+    "no-undef": 2,
+    "no-undefined": 2,
+    "comma-dangle": [2, "never"],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "guard-for-in": 2,
+    "no-unneeded-ternary": 0,
+    "no-eval": 2,
+    "no-with": 2,
+    "valid-typeof": 2,
+    "no-console": 0,
+    "no-unused-vars": 2,
+    "no-continue": 1,
+    "no-extra-semi": 1,
+    "no-unreachable": 1,
+    "no-unused-expressions": 1,
+    "no-magic-numbers": 1,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ],
+    "max-len": [1, 160, 4],
+    "jsx-quotes": 1,
+    "import/prefer-default-export": 0,
+    "no-param-reassign": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": 0,
+    "react/prefer-stateless-function": 0
   }
+}

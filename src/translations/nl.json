@@ -7,7 +7,7 @@
     "genre": "Genre",
     "image": "Link naar afbeelding"
   },
-  "formLabels" : {
+  "formLabels": {
     "title": "Titel *",
     "author": "Auteur *",
     "description": "Beschrijving *",
