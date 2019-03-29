@@ -1,19 +1,10 @@
 import React from 'react';
-import ValidationMessages from './ValidationMessages';
-import Label from './Label';
+import FormControl from './FormControl';
 
-const TextInput = ({ handler, touched, errors, meta: { name } }) => {
-  const inputClass = `validate ${touched && errors ? 'invalid' : ''}`;
-  const labelClass = `active ${touched && errors ? 'val-err' : ''}`;
-  return (
-    <div className="row">
-      <div className="input-field col s12">
-        <input {...handler()} id={name} type="text" className={inputClass} />
-        <Label name={name} className={labelClass} />
-        <ValidationMessages touched={touched} errors={errors} />
-      </div>
-    </div>
-  );
+const TextInput = props => {
+  return FormControl(props)((handler, name, className) => (
+    <input {...handler()} id={name} type="text" className={className} />
+  ));
 };
 
 export default TextInput;

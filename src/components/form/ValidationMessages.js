@@ -3,7 +3,6 @@ import { Translate } from 'react-localize-redux';
 import fillPlaceholders from '../localize/PlaceholderFiller';
 
 const ValidationMessages = ({touched, errors}) => {
-    console.log(errors);
     return (
         <div>
           {touched && errors && (
@@ -15,7 +14,7 @@ const ValidationMessages = ({touched, errors}) => {
             </div>
           )}
         </div>
-      )
+      );
 };
 
 export default ValidationMessages;
