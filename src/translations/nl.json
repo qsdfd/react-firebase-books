@@ -19,8 +19,13 @@
     "minLength": "Input moet minstens ${minLength} karakters lang zijn"
   },
   "createNewBook": "Creëer boek",
+  "editBook": "Bewerk Boek",
   "submit": "Submit",
   "create": "Creëer",
+  "edit": "Bewerk",
   "loading": "${item} is aan het laden...",
-  "book": "Boek"
+  "book": "Boek",
+  "pageNotFound": "Pagina niet gevonden",
+  "save": "Opslaan",
+  "delete": "Verwijder"
 }

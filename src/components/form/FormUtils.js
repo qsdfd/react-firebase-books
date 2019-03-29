@@ -5,7 +5,7 @@ import SubmitButton from './SubmitButton';
 
 export const generateForm = ({
   fieldConfig,
-  valueHandler,
+  performAction,
   redirectAfterSubmit,
   translation: { formTitleId, submitButtonTextId }
 }) => {
@@ -18,8 +18,8 @@ export const generateForm = ({
   const handleSubmit = e => {
     e.preventDefault();
     if (form.valid) {
-      valueHandler(form.value);
-      redirectAfterSubmit();
+        redirectAfterSubmit();
+        performAction(form.value);
     }
   };
 

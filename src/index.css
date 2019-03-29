@@ -39,3 +39,8 @@ div>.brand-logo {
 .white-text {
   color: "white";
 }
+
+nav .brand-logo i {
+  float: unset;
+  margin-right: 5px;
+}

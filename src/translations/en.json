@@ -19,8 +19,13 @@
     "minLength": "Input must be at least ${minLength} characters long"
   },
   "createNewBook": "Create New Book",
+  "editBook": "Edit Book",
   "submit": "Submit",
   "create": "Create",
+  "edit": "Edit",
   "loading": "Loading ${item}...",
-  "book": "Book"
+  "book": "Book",
+  "pageNotFound": "Page not found",
+  "save": "Save",
+  "delete": "Delete"
 }

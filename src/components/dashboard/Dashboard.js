@@ -10,8 +10,9 @@ class Dashboard extends Component {
 
     return (
       <div className="container">
-        <div className="row" />
-        <BookList books={books} />
+        <div className="row">
+          <BookList books={books} />
+        </div>
       </div>
     );
   }

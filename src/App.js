@@ -1,14 +1,17 @@
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { withLocalize } from 'react-localize-redux';
 import BookDetails from './components/books/BookDetails';
-
 import CreateBook from './components/books/CreateBook';
 import Dashboard from './components/dashboard/Dashboard';
 import Navbar from './components/navbar/Navbar';
+import EditBook from './components/books/EditBook';
 import en from './translations/en.json';
 import nl from './translations/nl.json';
+import PageNotFound from './components/PageNotFound';
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +27,10 @@ class App extends Component {
     props.addTranslationForLanguage(nl, 'nl');
   }
 
+  componentDidMount(){
+    M.AutoInit();
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -31,8 +38,10 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Dashboard} />
+            <Route path="/book/edit/:id" component={EditBook} />
             <Route path="/book/:id" component={BookDetails} />
             <Route path="/create" component={CreateBook} />
+            <Route component={PageNotFound} />
           </Switch>
         </div>
       </BrowserRouter>

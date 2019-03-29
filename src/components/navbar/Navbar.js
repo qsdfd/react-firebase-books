@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Translate } from 'react-localize-redux';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Translate } from "react-localize-redux";
 
-import LanguageToggle from '../localize/LanguageToggle';
+import LanguageToggle from "../localize/LanguageToggle";
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-wrapper grey darken-3">
           <Link to="/" className="brand-logo left">
-            <i className="fas fa-book" /> <Translate id="title" />
+            <i className="fas fa-book main-logo" /> <Translate id="title" />
           </Link>
           <LanguageToggle />
         </div>
