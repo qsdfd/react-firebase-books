@@ -1,5 +1,4 @@
 import 'materialize-css/dist/css/materialize.min.css';
-import M from 'materialize-css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -25,10 +24,6 @@ class App extends Component {
     });
     props.addTranslationForLanguage(en, 'en');
     props.addTranslationForLanguage(nl, 'nl');
-  }
-
-  componentDidMount(){
-    M.AutoInit();
   }
 
   render() {

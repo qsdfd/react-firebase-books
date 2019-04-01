@@ -5,7 +5,7 @@ const LanguageToggle = ({ languages, setActiveLanguage }) => {
   return (
     <div className="right">
       {languages.map((lang, i) => (
-        <button key={lang.code} onClick={() => setActiveLanguage(lang.code)}>
+        <button key={lang.code} onClick={() => setActiveLanguage(lang.code)} className="waves-effect waves-light btn">
           {lang.name}
         </button>
       ))}

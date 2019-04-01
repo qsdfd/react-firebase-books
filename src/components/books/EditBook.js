@@ -9,21 +9,27 @@ import { editBookAction } from '../../store/actions/bookActions';
 
 const EditBook = ({ history, book, editBook }) => {
   if (book) {
-    return generateForm({
+    const form = generateForm({
+      formTitleId: 'editBook',
       fieldConfig: getBookFieldConfig(book),
-      performAction: updatedBook => editBook({id: book.id, ...updatedBook}),
+      performAction: updatedBook => editBook({ id: book.id, ...updatedBook }),
       redirectAfterSubmit: () => {
         history.push(`/book/${book.id}`);
       },
       translation: {
-        formTitleId: 'editBook',
         submitButtonTextId: 'save'
       }
     });
+
+    return (
+      <div className="container white">
+        {form}
+      </div>
+    );
   }
 
   return (
-    <div className="container center">
+    <div className="container white">
       <h5 className="white-text">
         <Translate id="loading" data={{ item: <Translate id="book" /> }} />
       </h5>
@@ -35,7 +41,7 @@ const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
   const books = state.firestore.data.books;
   const book = books ? books[id] : null;
-  return {book: {...book, id}};
+  return { book: { ...book, id } };
 };
 
 const mapDispatchToProps = dispatch => {

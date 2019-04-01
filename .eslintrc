@@ -43,7 +43,7 @@
     "no-continue": 1,
     "no-extra-semi": 1,
     "no-unreachable": 1,
-    "no-unused-expressions": 1,
+    "no-unused-expressions": 0,
     "no-magic-numbers": 1,
     "no-use-before-define": [
       "error",

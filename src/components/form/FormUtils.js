@@ -1,13 +1,14 @@
 import React from 'react';
 import { FormGenerator } from 'react-reactive-form';
-import { Translate } from 'react-localize-redux';
 import SubmitButton from './SubmitButton';
+import FormTitle from './FormTitle';
 
 export const generateForm = ({
+  formTitleId,
   fieldConfig,
   performAction,
   redirectAfterSubmit,
-  translation: { formTitleId, submitButtonTextId }
+  translation: { submitButtonTextId }
 }) => {
   let form = {};
 
@@ -18,8 +19,8 @@ export const generateForm = ({
   const handleSubmit = e => {
     e.preventDefault();
     if (form.valid) {
-        redirectAfterSubmit();
-        performAction(form.value);
+      if (performAction) performAction(form.value);
+      if (redirectAfterSubmit) redirectAfterSubmit();
     }
   };
 
@@ -31,13 +32,9 @@ export const generateForm = ({
   };
 
   return (
-    <div className="container">
-      <form onSubmit={e => handleSubmit(e)} className="white col s12">
-        <h5 className="grey-text text-dark-3">
-          <Translate id={formTitleId} />
-        </h5>
-        <FormGenerator onMount={setForm} fieldConfig={fieldConfig} />
-      </form>
-    </div>
+    <form onSubmit={e => handleSubmit(e)}>
+      {formTitleId && (<FormTitle titleId={formTitleId} />)}
+      <FormGenerator onMount={setForm} fieldConfig={fieldConfig} />
+    </form>
   );
 };

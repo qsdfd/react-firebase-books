@@ -8,7 +8,7 @@ const SubmitButton = ({ disabled, translationId }) => {
         <button
           type="submit"
           disabled={disabled}
-          className="btn grey darken-2 z-depth-0"
+          className="waves-effect waves-light btn"
         >
           <Translate id={translationId ? translationId : 'submit'} />
         </button>

@@ -1,24 +1,30 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import M from 'materialize-css';
 import { createBookAction } from '../../store/actions/bookActions';
 import { generateForm } from '../form/FormUtils';
 import { getBookFieldConfig } from './BookFormConfig';
+import { Translate } from 'react-localize-redux';
 
-const CreateBook = ({history, createBook}) => {
-  return generateForm({
+const CreateBook = ({ history, createBook }) => {
+  const form = generateForm({
+    formTitleId: 'createNewBook',
     fieldConfig: getBookFieldConfig(),
     performAction: newBook => {
       createBook(newBook);
-      M.toast({html: 'I am a toast!'})
     },
     redirectAfterSubmit: () => {
       history.push('/');
     },
     translation: {
-      formTitleId: 'createNewBook',
       submitButtonTextId: 'create'
     }
   });
+
+  return (
+    <div className="container white">
+      {form}
+    </div>
+  );
 };
 
 const mapDispatchToProps = dispatch => {
