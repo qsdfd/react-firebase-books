@@ -1,6 +1,8 @@
 {
   "title": "Boeken",
   "labels": {
+    "email": "E-mail",
+    "password": "Wachtwoord",
     "title": "Titel",
     "author": "Auteur",
     "description": "Beschrijving",
@@ -8,6 +10,8 @@
     "image": "Link naar afbeelding"
   },
   "formLabels": {
+    "email": "Email *",
+    "password": "Password *",
     "title": "Titel *",
     "author": "Auteur *",
     "description": "Beschrijving *",
@@ -16,9 +20,11 @@
   },
   "validation": {
     "required": "* Dit veld is vereist",
-    "minLength": "Input moet minstens ${minLength} karakters lang zijn"
+    "minLength": "Input moet minstens ${minLength} karakters lang zijn",
+    "email": "Ongeldig e-mail formaat"
   },
   "createNewBook": "Creëer boek",
+  "newBook": "Nieuw Book",
   "editBook": "Bewerk Boek",
   "submit": "Submit",
   "create": "Creëer",
@@ -27,5 +33,8 @@
   "book": "Boek",
   "pageNotFound": "Pagina niet gevonden",
   "save": "Opslaan",
-  "delete": "Verwijder"
+  "delete": "Verwijder",
+  "signUp": "Aanmelden",
+  "signIn": "Log in",
+  "logOut": "logOut"
 }

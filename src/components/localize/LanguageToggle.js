@@ -4,7 +4,7 @@ import { withLocalize } from 'react-localize-redux';
 const LanguageToggle = ({ languages, setActiveLanguage }) => {
   return (
     <div className="right">
-      {languages.map((lang, i) => (
+      {languages.map((lang) => (
         <button key={lang.code} onClick={() => setActiveLanguage(lang.code)} className="waves-effect waves-light btn">
           {lang.name}
         </button>

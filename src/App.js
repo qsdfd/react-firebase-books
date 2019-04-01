@@ -11,6 +11,8 @@ import EditBook from './components/books/EditBook';
 import en from './translations/en.json';
 import nl from './translations/nl.json';
 import PageNotFound from './components/PageNotFound';
+import SignIn from './components/auth/SingIn';
+import SignUp from './components/auth/SignUp';
 
 class App extends Component {
   constructor(props) {
@@ -36,6 +38,8 @@ class App extends Component {
             <Route path="/book/edit/:id" component={EditBook} />
             <Route path="/book/:id" component={BookDetails} />
             <Route path="/create" component={CreateBook} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
             <Route component={PageNotFound} />
           </Switch>
         </div>

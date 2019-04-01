@@ -1,6 +1,18 @@
 import { Validators } from 'react-reactive-form';
 import TextInput from '../form/TextInput';
 import TextareaInput from '../form/TextareaInput';
+import {
+  TITLE_MIN_LENGTH,
+  TITLE_MAX_LENGTH,
+  AUTHOR_MIN_LENGTH,
+  AUTHOR_MAX_LENGTH,
+  DESCRIPTION_MIN_LENGTH,
+  DESCRIPTION_MAX_LENGTH,
+  GENRE_MIN_LENGTH,
+  GENRE_MAX_LENGTH,
+  IMAGE_MIN_LENGTH,
+  IMAGE_MAX_LENGTH
+} from '../../global/contstants';
 
 export const getBookFieldConfig = (bookToUpdate = {}) => {
   return {
@@ -10,8 +22,8 @@ export const getBookFieldConfig = (bookToUpdate = {}) => {
         options: {
           validators: [
             Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(500)
+            Validators.minLength(TITLE_MIN_LENGTH),
+            Validators.maxLength(TITLE_MAX_LENGTH)
           ]
         },
         render: TextInput,
@@ -22,8 +34,8 @@ export const getBookFieldConfig = (bookToUpdate = {}) => {
         options: {
           validators: [
             Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(500)
+            Validators.minLength(AUTHOR_MIN_LENGTH),
+            Validators.maxLength(AUTHOR_MAX_LENGTH)
           ]
         },
         render: TextInput,
@@ -34,8 +46,8 @@ export const getBookFieldConfig = (bookToUpdate = {}) => {
         options: {
           validators: [
             Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(2000)
+            Validators.minLength(DESCRIPTION_MIN_LENGTH),
+            Validators.maxLength(DESCRIPTION_MAX_LENGTH)
           ]
         },
         render: TextareaInput,
@@ -46,8 +58,8 @@ export const getBookFieldConfig = (bookToUpdate = {}) => {
         options: {
           validators: [
             Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(200)
+            Validators.minLength(GENRE_MIN_LENGTH),
+            Validators.maxLength(GENRE_MAX_LENGTH)
           ]
         },
         render: TextInput,
@@ -58,8 +70,8 @@ export const getBookFieldConfig = (bookToUpdate = {}) => {
         options: {
           validators: [
             Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(3000)
+            Validators.minLength(IMAGE_MIN_LENGTH),
+            Validators.maxLength(IMAGE_MAX_LENGTH)
           ]
         },
         render: TextInput,

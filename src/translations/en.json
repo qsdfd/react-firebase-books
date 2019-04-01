@@ -1,6 +1,10 @@
 {
   "title": "Books",
   "labels": {
+    "email": "Email",
+    "password": "Password",
+    "lastName": "Last Name",
+    "firstName": "First Name",
     "title": "Title",
     "author": "Author",
     "description": "Description",
@@ -8,6 +12,10 @@
     "image": "Image link"
   },
   "formLabels": {
+    "email": "Email *",
+    "password": "Password *",
+    "lastName": "Last Name *",
+    "firstName": "First Name *",
     "title": "Title *",
     "author": "Author *",
     "description": "Description *",
@@ -16,9 +24,11 @@
   },
   "validation": {
     "required": "This field is required",
-    "minLength": "Input must be at least ${minLength} characters long"
+    "minLength": "Input must be at least ${minLength} characters long",
+    "email": "Invalid email format"
   },
   "createNewBook": "Create New Book",
+  "newBook": "New Book",
   "editBook": "Edit Book",
   "submit": "Submit",
   "create": "Create",
@@ -27,5 +37,8 @@
   "book": "Book",
   "pageNotFound": "Page not found",
   "save": "Save",
-  "delete": "Delete"
+  "delete": "Delete",
+  "signUp": "Sign Up",
+  "signIn": "Log in",
+  "logOut": "logOut"
 }

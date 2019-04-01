@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { createBookAction } from '../../store/actions/bookActions';
 import { generateForm } from '../form/FormUtils';
 import { getBookFieldConfig } from './BookFormConfig';
-import { Translate } from 'react-localize-redux';
 
 const CreateBook = ({ history, createBook }) => {
   const form = generateForm({

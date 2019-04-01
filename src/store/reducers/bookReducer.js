@@ -17,10 +17,10 @@ export default (state = initState, action) => {
       console.log('book edit error', action.book);
       break;
     case 'DELETE_BOOK':
-      console.log('book delete', action.book);
+      console.log('book delete', action.id);
       break;
     case 'DELETE_BOOK_ERROR':
-      console.log('book delete error');
+      console.log('book delete error', action.id);
       break;
     default:
       break;

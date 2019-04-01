@@ -12,7 +12,7 @@ const EditBook = ({ history, book, editBook }) => {
     const form = generateForm({
       formTitleId: 'editBook',
       fieldConfig: getBookFieldConfig(book),
-      performAction: updatedBook => editBook({ id: book.id, ...updatedBook }),
+      performAction: updatedBook => editBook({ ...book, ...updatedBook }),
       redirectAfterSubmit: () => {
         history.push(`/book/${book.id}`);
       },

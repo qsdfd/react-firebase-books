@@ -1,10 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Translate } from "react-localize-redux";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Translate } from 'react-localize-redux';
 
-import LanguageToggle from "../localize/LanguageToggle";
+import LanguageToggle from '../localize/LanguageToggle';
+import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
 
-const Navbar = () => {
+const Navbar = ({ auth, profile }) => {
+  const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
   return (
     <div>
       <nav>
@@ -13,10 +17,19 @@ const Navbar = () => {
             <i className="fas fa-book main-logo" /> <Translate id="title" />
           </Link>
           <LanguageToggle />
+          {links}
         </div>
       </nav>
     </div>
   );
 };
 
-export default Navbar;
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
+  };
+};
+
+export default connect(mapStateToProps)(Navbar);
