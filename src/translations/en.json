@@ -25,6 +25,7 @@
   "validation": {
     "required": "This field is required",
     "minLength": "Input must be at least ${minLength} characters long",
+    "maxLength": "Input must be maximum ${maxLength} characters long",
     "email": "Invalid email format"
   },
   "createNewBook": "Create New Book",

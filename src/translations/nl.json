@@ -21,6 +21,7 @@
   "validation": {
     "required": "* Dit veld is vereist",
     "minLength": "Input moet minstens ${minLength} karakters lang zijn",
+    "maxLength": "Input moet maximum ${maxLength} karakters lang zijn",
     "email": "Ongeldig e-mail formaat"
   },
   "createNewBook": "Creëer boek",
